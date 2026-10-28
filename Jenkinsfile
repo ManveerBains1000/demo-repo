@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven: 'jenkins-maven'
+        maven 'jenkins-maven'
     }
 
 
@@ -27,6 +27,7 @@ pipeline {
             post {
                 always {
                     junit '**/target/surefire-reports/TEST-*.xml'
+            }
             }
         }
 
